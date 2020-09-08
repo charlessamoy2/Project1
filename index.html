@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SayHello - Charles Samoy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="landingPage">
+        <h1>SayHello Project</h1>
+        <h2>By Charles Samoy</h2>
+        <div class="navigation">
+            <button data-action="levelOne">Level 1</button>
+            <button data-action="levelTwo">Level 2</button>
+            <button data-action="levelThree">Level 3</button>
+        </div>
+    </div>
+    <div id="levelOne" class="mainDiv">
+        <h1>SayHello Project</h1>
+        <h2>Level One</h2>
+        <div class="mainBody">
+            <div id="display"><p id = "displayTextOne"></p></div>
+            <button id="helloOne" onclick="helloOne()">Hello</button>
+        </div>
+        <div class="navigation">
+            <button>Go Home</button>
+        </div>
+    </div>
+    <div id="levelTwo" class="mainDiv">
+        <h1>SayHello Project</h1>
+        <h2>Level Two</h2>
+        <div class="mainBody">
+            <div id="display"><p id = "displayTextTwo"></p></div>
+            <label for="name">Please Input Name Here:</label>
+            <input type="text" id="nameTwo" name="name" placeholder="Enter your name here..."> <br>
+            <button onclick="helloTwo()">Submit</button>
+        </div>
+        <div class="navigation">
+            <button>Go Home</button>
+        </div>
+    </div>
+    <div id="levelThree" class="mainDiv">
+        <h1>SayHello Project</h1>
+        <h2>Level Three</h2>
+        <div class="mainBody">
+            <div id="display"><p id = "displayTextThree"></p></div>
+            <div class="nameKeys">
+                <button>Franz</button>
+                <button>LJ</button>
+                <button>Jose</button>
+                <button>Victor</button>
+                <button>Francis</button>
+                <button>John</button>
+                <button data-action="sayHello" class="key-submit">Hello!</button>
+                <button data-action="sayGoodBye" class="key-submit">GoodBye</button>
+            </div>
+        </div>
+        <div class="navigation">
+            <button>Go Home</button>
+        </div>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>

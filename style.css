@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,700;1,400&display=swap');
+
+/* general styling */
+* {
+    width: 800px;
+    justify-content: 'center';
+    height: fit-content;
+    margin:auto;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 75px;
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+    background-repeat: no-repeat;
+}
+
+/* Landing Page */
+#landingPage {
+    color: white;
+    position: absolute;
+}
+
+#landingPage h1 {
+    font-size: 4.5rem;
+}
+
+#landingPage h2 {
+    font-size: 3.0rem;
+    margin-bottom: 30px;
+}
+
+.mainDiv {
+    visibility: hidden;
+    position: absolute;
+}
+
+/* general navigation (buttons) styling */
+.navigation button{
+    width: 150px;
+    height: 50px;
+    margin: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    background-color: lightcoral;
+    border: 1px solid black;
+    border-radius: 5px; 
+}
+
+.navigation button:hover{
+    background-color: rgba(240, 128, 128, 0.85);
+}
+
+.mainDiv h1 {
+    color: white;
+    font-size: 4.5rem;
+}
+
+.mainDiv h2 {
+    color: white;
+    font-size: 3.0rem;
+    margin-bottom: 20px;
+}
+
+/*general display styling*/
+#display{
+    width: 800px;
+    height: 75px;
+    background-color: rgba(255, 255, 255, 0.90);
+    margin-bottom: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+/* Level One styling */
+#levelOne #display #displayTextOne {
+    font-size: 30px;
+    text-align: center;
+    padding: 20px 0;
+}
+
+#levelOne .mainBody button{
+    width: 30%;
+    height: 50px;
+    font-size: 25px;
+    color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-weight: 600;
+    background-color: lightcoral;
+}
+
+#levelOne .mainBody button:hover{
+    background-color: rgba(240, 128, 128, 0.85);
+}
+
+/* Level Two styling */
+
+#levelTwo #display #displayTextTwo {
+    font-size: 30px;
+    text-align: center;
+    padding: 20px 0;
+}
+
+#levelTwo .mainBody input{
+    margin-left: 10px;
+    margin-bottom: 25px;
+    margin-top: 10px;
+    height: 45px;
+    font-size: 20px;
+    width: 500px;
+}
+
+#levelTwo .mainBody label{
+    color:white;
+    font-size: 25px;
+}
+
+#levelTwo .mainBody button{
+    width: 30%;
+    height: 50px;
+    font-size: 25px;
+    color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-weight: 600;
+    background-color: lightcoral;
+}
+
+#levelTwo .mainBody button:hover{
+    background-color: rgba(240, 128, 128, 0.85);
+}
+
+/* Level three styling */
+
+.nameKeys {
+    width: 750px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.nameKeys>* {
+    width:100%;
+    height: 45px;
+    font-size: 20px;
+    color: black;
+    border: 1px solid grey;
+    font-weight: 600;
+    background-color: rgb(240, 240, 240);
+}
+
+.nameKeys>*:hover {
+    background-color: rgba(240, 240, 240, 0.80);
+    outline: none;
+}
+
+.nameKeys>.is-depressed{
+    background-color: rgb(199, 199, 199);
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.5) inset;
+}
+
+.key-submit {
+    color:white;
+    background-color: lightcoral;
+    margin-top: 10px;
+}
+
+.key-submit:hover {
+    background-color: rgba(240, 128, 128, 0.80);
+    outline:none;
+}
+
+#displayTextThree {
+    font-size: 30px;
+    text-align: center;
+    padding: 20px 0;
+}
