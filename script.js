@@ -14,7 +14,7 @@ function handleNavigation(x) {
             const inputTwo = document.getElementById('nameTwo');
             const displayTwo = document.getElementById('displayTextTwo');
             const displayThree = document.getElementById('displayTextThree');
-            let depressed = document.getElementsByClassName('is-depressed');
+            const depressed = document.getElementsByClassName('is-depressed');
 
             landingPage.style.visibility="visible";
             for (i in bodies){
@@ -73,7 +73,7 @@ function helloOne() {
 function helloTwo() {
     const inputTwo = document.getElementById('nameTwo').value;
     const displayTwo = document.getElementById('displayTextTwo');
-    if (inputTwo==""){
+    if (inputTwo===""){
         displayTwo.textContent="Enter your name below first!!!";
     } else {
         displayTwo.textContent=`Hello, ${inputTwo}!`;
@@ -84,6 +84,7 @@ function helloTwo() {
 const levelThree = document.querySelectorAll('.nameKeys');
 levelThree.forEach(levelThree => levelThree.addEventListener('click',helloThree));
 let name = "";
+let displaySuccess=false;
 
 function helloThree(x) {
     if(x.target.matches('button')) {
@@ -97,14 +98,35 @@ function helloThree(x) {
             name = content;
             key.classList.add('is-depressed')
         }
-        if (name==""){
-            displayThree.textContent="Please pick name below!"
-        }else{
-            if (action == "sayHello") {
-                displayThree.textContent=`Hello, ${name}!`
+
+        if (name==="" && key.textContent!=="CE"){
+            displayThree.textContent="Please pick name below!";
+            return;
+        }else if (key.textContent!=="CE" && !displaySuccess){
+            if (action === "sayHello") {
+                key.textContent="CE";
+                displayThree.textContent=`Hello, ${name}!`;
+                displaySuccess = true;
+                return;
             }
-            if (action == "sayGoodBye") {
-                displayThree.textContent=`Goodbye, ${name}!`
+            if (action === "sayGoodBye") {
+                displayThree.textContent=`Goodbye, ${name}!`;
+                key.textContent="CE";
+                displaySuccess = true;
+                return;
+            }
+        }
+
+        
+
+        if (key.textContent==="CE") {
+            displayThree.textContent="";
+            name="";
+            displaySuccess = false;
+            if (action === "sayHello") {
+                key.textContent = "Hello!"
+            } else {
+                key.textContent = "Goodbye!"
             }
         }
     }
