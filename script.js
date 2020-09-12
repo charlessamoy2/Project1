@@ -15,7 +15,9 @@ function handleNavigation(x) {
             const displayTwo = document.getElementById('displayTextTwo');
             const displayThree = document.getElementById('displayTextThree');
             const depressed = document.getElementsByClassName('is-depressed');
+            const submitButtons = document.getElementsByClassName("key-submit");
 
+            //render landing page
             landingPage.style.visibility="visible";
             for (i in bodies){
                 if(bodies[i].style){
@@ -23,6 +25,7 @@ function handleNavigation(x) {
                 }
             }
 
+            //reset values
             countOne=0;
             displayOne.textContent = "";
             inputTwo.value = "";
@@ -32,6 +35,17 @@ function handleNavigation(x) {
             while(depressed.length>0){
                 depressed[0].classList.remove('is-depressed');
             }
+            for (i in submitButtons){
+                if (submitButtons[i].textContent==="CE" && submitButtons[i].dataset.action=="sayHello") 
+                {
+                    submitButtons[i].textContent="Hello!";
+                }
+                if (submitButtons[i].textContent==="CE" && submitButtons[i].dataset.action=="sayGoodBye") 
+                {
+                    submitButtons[i].textContent="Goodbye";
+                }
+            }
+            displaySuccess=false;
             
         } else {
             const landingPage = document.getElementById("landingPage");
